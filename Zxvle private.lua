@@ -14,9 +14,8 @@ local Window = Fluent:CreateWindow({
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
-    BloxFruit = Window:AddTab({ Title = "Blox fruit", Icon = ""})
+    Main = Window:AddTab({ Title = "Main", Icon = "code-2" }),
+    BloxFruit = Window:AddTab({ Title = "Blox fruit", Icon = "app-window"}),
 }
 
 local Options = Fluent.Options
@@ -200,12 +199,10 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 
 Window:SelectTab(1)
 
-local loadedTime = os.time()
-
 Fluent:Notify({
     Title = "Zxvle",
-    Content = ("Game loaded at:"os.time())
-    Duration = 5.7
+    Content = ("Game loaded at:"),
+    Duration = 5.7,
 })
 
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
