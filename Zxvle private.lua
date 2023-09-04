@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Clicking legends" .. Fluent.Version,
+    Title = "Zxvle Hub privte" .. Fluent.Version,
     SubTitle = "by Zxvle",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
@@ -34,7 +34,31 @@ do
         Title = "Note!",
         Content = "This is just a hub i do not own any scripts shown in here"
     })
-
+    Tabs.Main:AddButton({
+        Title = "DarkDex",
+        Description = "Roblox explore",
+        Callback = function()
+            Window:Dialog({
+                Title = "Inject Dex?",
+                Content = "A powerful Script!",
+                Buttons = {
+                    {
+                        Title = "Injects",
+                        Callback = function()
+                            getgenv().Key = "Bash"
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AIY%20Dex",true))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
 
     Tabs.Main:AddButton({
@@ -99,6 +123,32 @@ do
                         Title = "Injectes",
                         Callback = function()
                             loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptBloxOfficial/Script/main/Anime%20Hub'))() 
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+
+        Tabs.BloxFruit:AddButton({
+        Title = "TAWAN hubV2",
+        Description = "Very good for raid",
+        Callback = function()
+            Window:Dialog({
+                Title = "Inject TawanV2?",
+                Content = "ONLY FOR BLOX FRUITS!",
+                Buttons = {
+                    {
+                        Title = "Inject",
+                        Callback = function()
+                            loadstring(game:HttpGet('https://raw.githubusercontent.com/kill55547/TAWAN_HUB/main/TAWANxHUB_V2.lua.txt', true))()
                         end
                     },
                     {
@@ -201,7 +251,7 @@ Window:SelectTab(1)
 
 Fluent:Notify({
     Title = "Zxvle",
-    Content = ("Game loaded at:"),
+    Content = ("Game loaded at:"os.time),
     Duration = 5.7,
 })
 
